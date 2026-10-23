@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220">
+  <rect width="400" height="220" fill="#eef4ff"/>
+  <circle cx="200" cy="110" r="85" fill="#cfe0ff" stroke="#3880ff" stroke-width="4"/>
+  <circle cx="200" cy="110" r="4" fill="#1f2937"/>
+  <line x1="200" y1="110" x2="285" y2="110" stroke="#eb445a" stroke-width="3"/>
+  <text x="242" y="102" font-family="Arial" font-size="18" fill="#eb445a" text-anchor="middle">r</text>
+</svg>

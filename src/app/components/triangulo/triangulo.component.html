@@ -1,0 +1,41 @@
+<ion-card>
+  <ion-img src="assets/img/triangulo.svg" alt="Triángulo escaleno con lados a, b y c"></ion-img>
+
+  <ion-card-header>
+    <ion-card-title>Triángulo escaleno</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <p>
+      Un triángulo escaleno tiene sus tres lados de distinta longitud. Su perímetro
+      es la suma de los tres lados: <strong>P = a + b + c</strong>.
+    </p>
+
+    <form (ngSubmit)="calcularPerimetro()">
+      <ion-item>
+        <ion-input type="number" label="Lado A" labelPlacement="floating"
+                   name="ladoA" [(ngModel)]="ladoA"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="number" label="Lado B" labelPlacement="floating"
+                   name="ladoB" [(ngModel)]="ladoB"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="number" label="Lado C" labelPlacement="floating"
+                   name="ladoC" [(ngModel)]="ladoC"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" (click)="calcularPerimetro()">
+        Calcular perímetro
+      </ion-button>
+    </form>
+
+    <ion-text color="success" *ngIf="perimetro !== null">
+      <h2>El perímetro es {{ perimetro | number: '1.2-2' }}</h2>
+    </ion-text>
+
+    <ion-text color="danger" *ngIf="mensajeError">
+      <p>{{ mensajeError }}</p>
+    </ion-text>
+  </ion-card-content>
+</ion-card>

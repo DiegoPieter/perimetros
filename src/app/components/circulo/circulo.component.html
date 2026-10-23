@@ -1,0 +1,39 @@
+<ion-card>
+  <ion-img src="assets/img/circulo.svg" alt="Círculo con su radio"></ion-img>
+
+  <ion-card-header>
+    <ion-card-title>Círculo</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <p>
+      Un círculo es una figura plana formada por todos los puntos que están a la
+      misma distancia (el radio) de un punto central. Su perímetro se calcula como
+      <strong>P = 2 · π · r</strong>.
+    </p>
+
+    <form (ngSubmit)="calcularPerimetro()">
+      <ion-item>
+        <ion-input
+          type="number"
+          label="Radio"
+          labelPlacement="floating"
+          name="radio"
+          [(ngModel)]="radio">
+        </ion-input>
+      </ion-item>
+
+      <ion-button expand="block" (click)="calcularPerimetro()">
+        Calcular perímetro
+      </ion-button>
+    </form>
+
+    <ion-text color="success" *ngIf="perimetro !== null">
+      <h2>El perímetro es {{ perimetro | number: '1.2-2' }}</h2>
+    </ion-text>
+
+    <ion-text color="danger" *ngIf="mensajeError">
+      <p>{{ mensajeError }}</p>
+    </ion-text>
+  </ion-card-content>
+</ion-card>

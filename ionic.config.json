@@ -1,0 +1,7 @@
+{
+  "name": "perimetros",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
